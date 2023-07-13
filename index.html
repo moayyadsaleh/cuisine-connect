@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CuisineConnect. | Find Delicious Recipes Instantly</title>
+  <link rel="stylesheet" href="/style.css">
+  <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+   integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+   crossorigin="anonymous"
+  />
+  <!--Font awesome-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <meta name="description" content="Discover a wide variety of delicious recipes instantly with Recipe Finder. Simply enter a recipe name and get step-by-step instructions and ingredients.">
+  <!-- Open Graph Protocol (Facebook, LinkedIn) -->
+  <meta property="og:title" content="Recipe Finder | Find Delicious Recipes Instantly">
+  <meta property="og:description" content="Discover a wide variety of delicious recipes instantly with Recipe Finder. Simply enter a recipe name and get step-by-step instructions and ingredients.">
+  <meta property="og:image" content="https://example.com/images/recipe-finder.jpg">
+  <meta property="og:url" content="https://example.com/recipe-finder">
+  <meta property="og:type" content="website">
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Recipe Finder | Find Delicious Recipes Instantly">
+  <meta name="twitter:description" content="Discover a wide variety of delicious recipes instantly with Recipe Finder. Simply enter a recipe name and get step-by-step instructions and ingredients.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1542010589005-d1eacc3918f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=892&q=80">
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://example.com/recipe-finder">
+  <!-- Other Meta Tags -->
+  <meta name="keywords" content="recipe finder, recipe search, find recipes, cooking, food, ingredients">
+  <meta name="robots" content="index,follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<!-- App Description 2-->
+<div class="container">
+  <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+  <div class="col-lg-7 p-3 p-lg-5 pt-lg-5 pt-md-5 pt-sm-5">
+    <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Discover Delicious Recipes</h1>
+    <p class="lead">Explore a vast collection of mouthwatering recipes from all over the World. Search, follow steps, and cook like a pro. Elevate your culinary skills, whether you're a beginner or an expert chef.</p>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+    </div>
+  </div>
+  <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+      <img class="rounded-lg-3" src="https://images.unsplash.com/photo-1542010589005-d1eacc3918f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=892&q=80" alt="" width="720">
+  </div>
+</div>
+</div>
+</div>
+
+ <!-- App Introduction -->
+ <div class="container">
+ <div class="b-example-divider"></div>
+ <div class="container col-xxl-8 px-4 py-5">
+   <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+     <div class="col-10 col-sm-8 col-lg-6">
+       <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" class="d-block mx-lg-auto img-fluid rounded-image" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+     </div>
+     <div class="col-lg-6">
+       <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Find a Recipe by Whatever!</h1>
+       <p class="lead"></p>
+       <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+ </div>
+        <!-- form 1 -->
+         <form id="recipe-name" action="/combinedSearch" method="post">
+           <div class="row g-2">
+             <div class="col-md-12 mb-3">
+               <div class="input-group">
+                 <input type="text" name="query" class="form-control form-control-lg" placeholder="Search by Recipe Name" autofocus >
+                 <button type="submit" class="btn btn-info btn-lg px-4 custom-button">Search</button>
+               </div>
+             </div>
+            <!-- form 4 -->
+<form id="diet-select" action="/combinedSearch" method="post">
+  <div class="col-md-12 mb-3">
+    <div class="input-group">
+      <select class="form-select form-control-lg" name="diet" id="dietSelect">
+        <option value="" disabled selected hidden>Search By Diet Type</option>
+        <option value="Gluten Free">Gluten Free</option>
+        <option value="Ketogenic">Ketogenic</option>
+        <option value="Vegetarian">Vegetarian</option>
+        <option value="Lacto-Vegetarian">Lacto-Vegetarian</option>
+        <option value="Vegan">Vegan</option>
+        <option value="Whole30">Whole30</option>
+      </select>
+      <button type="submit" class="btn btn-info btn-lg px-4">Search</button>
+    </div>
+  </div>
+</form>
+             <!-- form 5  -->
+             <form id="preperation-time" action="/combinedSearch" method="post">
+                <div class="col-md-12">
+               <div class="input-group">
+                 <input type="number" name="maxPreparationTime" class="form-control form-control-lg" placeholder="Search by Max Prep time" min="5">
+                 <button type="submit" class="btn btn-info btn-lg px-4 custom-button">Search</button>
+               </div>
+             </div>
+             </form>
+            <!-- form 6 -->
+            <form id="sort" action="/combinedSearch" method="post">
+              <div class="col-md-12 mb-3">
+               <div class="input-group">
+                 <select class="form-select form-control-lg" name="sort" id="sortSelect">
+                   <option value="">Sort and Search by Your Preferences</option>
+                   <option value="alcohol">Alcohol</option>
+                   <option value="caffeine">Caffeine</option>
+                   <option value="calories">Calories</option>
+                   <option value="carbs">Carbs</option>
+                   <option value="cholesterol">Cholesterol</option>
+                   <option value="energy">Energy</option>
+                   <option value="fiber">Fiber</option>
+                   <option value="healthiness">Healthiness</option>
+                   <option value="iodine">Iodine</option>
+                   <option value="iron">Iron</option>
+                   <option value="popularity">Popularity</option>
+                   <option value="protein">Protein</option>
+                   <option value="random">Random</option>
+                   <option value="saturated-fat">Saturated Fat</option>
+                   <option value="sodium">Sodium</option>
+                   <option value="sugar">Sugar</option>
+                   <option value="total-fat">Total Fat</option>
+                   <option value="trans-fat">Trans Fat</option>
+                   <option value="vitamin-b12">Vitamin B12</option>
+                   <option value="vitamin-c">Vitamin C</option>
+                 </select>
+                 <button type="submit" class="btn btn-info btn-lg px-4 custom-button">Search</button>
+               </div>
+             </div>
+            </form>
+             <!-- Form 8 -->
+             <div class="col-md-12 pt-5 d-flex justify-content-start">
+              <div class="form-check">
+                <div class="col-md-12">
+                  <h2 class="fw-bold"></h2>
+                  <ol>
+
+                  </ol>
+                </div>
+              </div>
+            </div>
+           </div>
+         </form>
+       </div>
+     </div>
+   </div>
+ </div>
+ </form>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="/app.js"></script>
+<script src="/script.js"></script>
+</body>
+</html>
+
+
+
